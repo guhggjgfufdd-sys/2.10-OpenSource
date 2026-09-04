@@ -32,11 +32,8 @@ jobs:
       - name: Make Gradlew Executable
         run: chmod +x gradlew
 
-      - name: Clean Project
-        run: ./gradlew clean
-
       - name: Build Debug APK
-        run: ./gradlew assembleDebug --info --continue
+        run: ./gradlew assembleDebug -Pandroid.injected.build.api=33 --stacktrace
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
