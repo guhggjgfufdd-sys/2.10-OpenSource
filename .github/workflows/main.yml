@@ -25,7 +25,7 @@ jobs:
           cache: 'gradle'
 
       - name: Setup Android NDK
-        uses: nvida-actions/setup-ndk@v1
+        uses: nttld/setup-ndk@v1
         with:
           ndk-version: r25c
         continue-on-error: true
